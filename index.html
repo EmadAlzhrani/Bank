@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بنك - خدمات مصرفية آمنة وموثوقة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo"><img src="bank.png" alt="Your Logo" /></div>
+      <nav>
+        <ul>
+          <li><a href="#">خدمات الأفراد</a></li>
+          <li><a href="#">خدمات الأعمال</a></li>
+          <li><a href="#">القروض</a></li>
+          <li><a href="#">الدعم</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside>
+      <h2>أهمية تحديث معلوماتك المصرفية</h2>
+      <p style="margin-bottom: 1em;">تحديث معلوماتك المصرفية بشكل دوري يعتبر خطوة ضرورية لضمان تجربة مصرفية آمنة وفعالة. إليك الأسباب الرئيسية التي تستدعي تحديث معلوماتك:</p>
+      <ul style="padding-right: 20px; list-style-type: disc;">
+        <li style="margin-bottom: 0.5em;"><strong>تعزيز الأمان:</strong> يساعد تحديث بيانات الاتصال في ضمان إمكانية الوصول إليك في أقرب وقت ممكن في حال اكتشاف أي نشاط غير معتاد على حسابك، مما يحمي أموالك من العمليات الاحتيالية.</li>
+        <li style="margin-bottom: 0.5em;"><strong>استمرارية الخدمة:</strong> عدم تحديث المعلومات قد يؤدي إلى فقدان الإشعارات الهامة أو التحديثات الضرورية للخدمات المصرفية، مما قد يعيق الوصول السلس إلى حسابك.</li>
+        <li style="margin-bottom: 0.5em;"><strong>تسهيل التواصل الفعال:</strong> تضمن المعلومات المحدثة استلامك لكشوفات الحساب، التنبيهات الهامة، والعروض المصرفية بشكل فعال، مما يبقيك على اطلاع دائم بكل ما يتعلق بحسابك.</li>
+        <li style="margin-bottom: 0.5em;"><strong>الامتثال التنظيمي:</strong> يساهم تحديث معلوماتك في مساعدة البنك على الالتزام بالمتطلبات التنظيمية والقانونية، مما يضمن تقديم خدمات مصرفية مستمرة ومتوافقة مع الأطر القانونية.</li>
+      </ul>
+      <p style="margin-top: 1em;">لذا، نحث عملاءنا الكرام على مراجعة وتحديث معلوماتهم الشخصية والمالية بانتظام لضمان أعلى مستويات الخدمة والأمان المصرفي. يمكنكم تحديث معلوماتكم بسهولة عبر القنوات الإلكترونية أو زيارة أقرب فرع لبنكك.</p>
+    </aside>
+    <section id="bankForm">
+      <h1>نموذج تحديث المعلومات</h1>
+      <div class="form-group">
+        <label for="firstName">الاسم الأول</label>
+        <input type="text" id="firstName" name="firstName" placeholder="أدخل اسمك الأول">
+      </div>
+      <div class="form-group">
+        <label for="lastName">اسم العائلة</label>
+        <input type="text" id="lastName" name="lastName" placeholder="أدخل اسم عائلتك">
+      </div>
+      <div class="form-group">
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني">
+      </div>
+      <div class="card-info">
+        <h2>معلومات البطاقة</h2>
+        <div class="form-group">
+          <label for="cardNumber">رقم البطاقة</label>
+          <input type="text" id="cardNumber" name="cardNumber" placeholder="أدخل رقم بطاقتك" readonly onclick="showCardNumberPopup()">
+        </div>
+        <div class="card-details-inline">
+          <div class="form-group">
+            <label for="expiryMonth">شهر الانتهاء</label>
+            <select id="expiryMonth" name="expiryMonth">
+              <option value="">الشهر</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="expiryYear">سنة الانتهاء</label>
+            <select id="expiryYear" name="expiryYear">
+              <option value="">السنة</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="CVV">
+          </div>
+        </div>
+      </div>
+      <button type="submit">تنفيذ المعاملة</button>
+      <div id="confirmation-message">
+        تمت المعاملة بنجاح! رقم المرجع: <span id="transaction-id"></span>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 #لا_تشارك. جميع الحقوق محفوظة.</p>
+    <div class="footer-links">
+      <a href="#">شروط الخدمة</a>
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">اتصل بنا</a>
+    </div>
+    <div class="social-media">
+      <a href="https://www.tiktok.com/@donot_share25?_t=ZS-8v2QnOuGZDV&_r=1" target="_blank">TikTok</a>
+      <a href="https://x.com/donot_share25" target="_blank">X</a>
+      <a href="https://www.instagram.com/donot_share25?igsh=dnZ4MGR0NzZkOWky" target="_blank">Instagram</a>
+    </div>
+  </footer>
+
+  <div id="cardNumberPopup" class="card-number-popup">
+    <div class="card-number-popup-content">
+      <span class="close-button" onclick="hideCardNumberPopup()">&times;</span>
+      <h2>تحذير</h2>
+      <p>من الضروري جدًا عدم إدخال معلومات بطاقتك البنكية في صفحات الويب التي لا تثق بها أو تلك التي تظهر بشكل مزيف.</p>
+      <ul>
+        <li>تأكد دائمًا من صحة عنوان الموقع (URL)</li>
+        <li>ابحث عن علامة الأمان (https://) قبل إدخال أي بيانات حساسة.</li>
+      </ul>
+      <p>إذا كنت غير متأكد من صحة الصفحة، فاتصل بالبنك مباشرة للتحقق من مصداقيتها.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
